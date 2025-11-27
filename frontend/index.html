@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+</head>
+<body>
+    <h1>Tienda</h1>
+   <div id="button">
+    <button onclick="formularioProducto()">Nuevo Producto</button>
+    <button onclick="verInventario()">Ver Inventario</button>
+    </div> <br><br>
+    <form id="formularioNuevo">
+        <label for="producto">Producto:
+            <input type="text" id="producto" name="producto" required>
+        </label><br><br>
+         <label for="precio">Precio:
+            <input type="number" id="precio" name="precio" required>
+        </label><br><br>
+         <label for="cantidad">Cantidad:
+            <input type="number" id="cantidad" name="cantidad" required>
+        </label><br><br>
+        <button onclick="crearProducto()">Guardar</button>
+    </form>
+    <div id="inventario"></div> 
+    <script src="app.js"></script>
+</body>
+</html>

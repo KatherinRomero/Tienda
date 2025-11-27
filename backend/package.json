@@ -1,0 +1,15 @@
+{
+  "name": "tienda-crud-completo",
+  "version": "1.0.0",
+  "description": "Proyecto completo CRUD con Node.js, Express y MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  }
+}
