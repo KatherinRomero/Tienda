@@ -8,28 +8,24 @@ function formularioProducto(){
 
 // Función para crear un nuevo producto en la base de datos
 function crearProducto() {
-    // Obtener los valores del formulario
-    const nombre =document.getElementById('producto').value;
-    const precio =document.getElementById('precio').value;
-    const cantidad =document.getElementById('cantidad').value;
+  const nombre = document.getElementById('nombre').value;
+  const precio = document.getElementById('precio').value;
+  const cantidad = document.getElementById('cantidad').value;
 
-    // Crear petición HTTP POST
-    const xhr =new XMLHttpRequest();
-    xhr.open('POST',API_URL,true);
-    xhr.setRequestHeader('Content-Type','application/json');
-     
-    // Manejar la respuesta del servidor
-    xhr.onload=function(){
-        alert('Producto creado')
-        verInventario(); // Actualizar el inventario
-    };
-    
-    // Enviar los datos como JSON 
-    xhr.send(JSON.stringify({
-        nombre,
-        precio,
-        cantidad
-    }))
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', API_URL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  xhr.onload = function () {
+    alert('Producto Guardado');
+    verInventario();
+  };
+
+  xhr.send(JSON.stringify({
+    nombre: nombre,
+    precio: precio,
+    cantidad: cantidad
+  }));
 }
 // Función para ver el inventario completo
 function verInventario(){
