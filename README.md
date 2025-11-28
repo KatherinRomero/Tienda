@@ -11,7 +11,7 @@ Este proyecto es un **sistema de control de inventarios** que permite gestionar 
 ---
 
 ### 1️⃣ Configurar el Backend
-cd backend
+cd backend<br>
 npm start
 
 
